@@ -16,6 +16,7 @@ class CommentController extends AbstractController
         // use real logic here to save this to the database
         if ($direction === 'up') {
             $logger->info('Voting up!');
+            
             $currentVoteCount = rand(7, 100);
         } else {
             $logger->info('Voting down!');
