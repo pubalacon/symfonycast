@@ -1,0 +1,21 @@
+diff --git a/templates/email/author-weekly-report.html.twig b/templates/email/author-weekly-report.html.twig
+index ab4a8131..03956daa 100644
+--- a/templates/email/author-weekly-report.html.twig
++++ b/templates/email/author-weekly-report.html.twig
+@@ -18,11 +18,13 @@
+                     <th>Title</th>
+                     <th>Comments</th>
+                 </tr>
++                {% for article in articles %}
+                 <tr>
+-                    <td>1</td>
+-                    <td>Article Title</td>
+-                    <td>99</td>
++                    <td>{{ loop.index }}</td>
++                    <td>{{ article.title }}</td>
++                    <td>{{ article.comments|length }}</td>
+                 </tr>
++                {% endfor %}
+             </table>
+         </columns>
+     </row>

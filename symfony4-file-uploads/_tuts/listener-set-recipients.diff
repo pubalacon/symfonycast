@@ -1,0 +1,25 @@
+diff --git a/.env b/.env
+index 67652a8c..03c8fcad 100644
+--- a/.env
++++ b/.env
+@@ -50,3 +50,5 @@ WKHTMLTOIMAGE_PATH=/usr/local/bin/wkhtmltoimage
+ # SENDGRID_KEY=
+ # MAILER_DSN=smtp://$SENDGRID_KEY@sendgrid
+ ###< symfony/sendgrid-mailer ###
++
++DEV_MAIL_RECIPIENT=someone@example.com
+diff --git a/config/services_dev.yaml b/config/services_dev.yaml
+new file mode 100644
+index 00000000..31d8f354
+--- /dev/null
++++ b/config/services_dev.yaml
+@@ -0,0 +1,9 @@
++services:
++    _defaults:
++        autowire: true
++        autoconfigure: true
++
++    Symfony\Component\Mailer\EventListener\EnvelopeListener:
++        arguments:
++            - null
++            - ['%env(DEV_MAIL_RECIPIENT)%']

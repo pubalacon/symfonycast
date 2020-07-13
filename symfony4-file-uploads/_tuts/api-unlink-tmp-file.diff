@@ -1,0 +1,16 @@
+diff --git a/src/Controller/ArticleReferenceAdminController.php b/src/Controller/ArticleReferenceAdminController.php
+index d9284cf5..b67f002d 100644
+--- a/src/Controller/ArticleReferenceAdminController.php
++++ b/src/Controller/ArticleReferenceAdminController.php
+@@ -84,6 +84,11 @@ class ArticleReferenceAdminController extends BaseController
+         $articleReference->setOriginalFilename($originalFilename ?? $filename);
+         $articleReference->setMimeType($uploadedFile->getMimeType() ?? 'application/octet-stream');
+ 
++        if (is_file($uploadedFile->getPathname())) {
++            unlink($uploadedFile->getPathname());
++            dd($uploadedFile->getPathname());
++        }
++
+         $entityManager->persist($articleReference);
+         $entityManager->flush();
+ 

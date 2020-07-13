@@ -1,0 +1,22 @@
+chapters:
+    - encore-install
+    - first-webpack
+    - twig-helpers-scripts
+    - require-import
+    - external-libs
+    - bootstrap
+    - code-splitting
+    - css
+    - sass
+    - copy-files
+    - multiple-entries
+    - entry-refactoring
+    - refactor-autocomplete
+    - autoprovide-jquery-modules
+    - add-style-entry
+    - postcss-browsers
+    - browserslist
+    - babel-polyfills
+    - single-runtime-chunk
+    - async-imports
+    - production

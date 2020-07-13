@@ -1,0 +1,38 @@
+diff --git a/src/Controller/ArticleReferenceAdminController.php b/src/Controller/ArticleReferenceAdminController.php
+index e3a6e826..acb0f4d1 100644
+--- a/src/Controller/ArticleReferenceAdminController.php
++++ b/src/Controller/ArticleReferenceAdminController.php
+@@ -14,7 +14,6 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
+ use Symfony\Component\Routing\Annotation\Route;
+ use Symfony\Component\Validator\Constraints\File;
+ use Symfony\Component\Validator\Constraints\NotBlank;
+-use Symfony\Component\Validator\ConstraintViolation;
+ use Symfony\Component\Validator\Validator\ValidatorInterface;
+ 
+ class ArticleReferenceAdminController extends BaseController
+@@ -51,13 +50,7 @@ class ArticleReferenceAdminController extends BaseController
+         );
+ 
+         if ($violations->count() > 0) {
+-            /** @var ConstraintViolation $violation */
+-            $violation = $violations[0];
+-            $this->addFlash('error', $violation->getMessage());
+-
+-            return $this->redirectToRoute('admin_article_edit', [
+-                'id' => $article->getId(),
+-            ]);
++            return $this->json($violations, 400);
+         }
+ 
+         $filename = $uploaderHelper->uploadArticleReference($uploadedFile);
+@@ -70,9 +63,7 @@ class ArticleReferenceAdminController extends BaseController
+         $entityManager->persist($articleReference);
+         $entityManager->flush();
+ 
+-        return $this->redirectToRoute('admin_article_edit', [
+-            'id' => $article->getId(),
+-        ]);
++        return $this->json($articleReference);
+     }
+ 
+     /**

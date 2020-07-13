@@ -1,0 +1,81 @@
+diff --git a/src/Command/AuthorWeeklyReportSendCommand.php b/src/Command/AuthorWeeklyReportSendCommand.php
+index b789f03e..3225faae 100644
+--- a/src/Command/AuthorWeeklyReportSendCommand.php
++++ b/src/Command/AuthorWeeklyReportSendCommand.php
+@@ -2,6 +2,7 @@
+ 
+ namespace App\Command;
+ 
++use App\Repository\UserRepository;
+ use Symfony\Component\Console\Command\Command;
+ use Symfony\Component\Console\Input\InputArgument;
+ use Symfony\Component\Console\Input\InputInterface;
+@@ -13,29 +14,35 @@ class AuthorWeeklyReportSendCommand extends Command
+ {
+     protected static $defaultName = 'app:author-weekly-report:send';
+ 
++    private $userRepository;
++
++    public function __construct(UserRepository $userRepository)
++    {
++        parent::__construct(null);
++
++        $this->userRepository = $userRepository;
++    }
++
+     protected function configure()
+     {
+         $this
+-            ->setDescription('Add a short description for your command')
+-            ->addArgument('arg1', InputArgument::OPTIONAL, 'Argument description')
+-            ->addOption('option1', null, InputOption::VALUE_NONE, 'Option description')
++            ->setDescription('Send weekly reports to authors')
+         ;
+     }
+ 
+     protected function execute(InputInterface $input, OutputInterface $output): int
+     {
+         $io = new SymfonyStyle($input, $output);
+-        $arg1 = $input->getArgument('arg1');
+-
+-        if ($arg1) {
+-            $io->note(sprintf('You passed an argument: %s', $arg1));
+-        }
+ 
+-        if ($input->getOption('option1')) {
+-            // ...
++        $authors = $this->userRepository
++            ->findAllSubscribedToNewsletter();
++        $io->progressStart(count($authors));
++        foreach ($authors as $author) {
++            $io->progressAdvance();
+         }
++        $io->progressFinish();
+ 
+-        $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
++        $io->success('Weekly reports were sent to authors!');
+ 
+         return 0;
+     }
+diff --git a/src/Repository/UserRepository.php b/src/Repository/UserRepository.php
+index 70b7bed8..d153145e 100644
+--- a/src/Repository/UserRepository.php
++++ b/src/Repository/UserRepository.php
+@@ -44,6 +44,17 @@ class UserRepository extends ServiceEntityRepository
+             ->getResult();
+     }
+ 
++    /**
++     * @return User[]
++     */
++    public function findAllSubscribedToNewsletter(): array
++    {
++        return $this->createQueryBuilder('u')
++            ->andWhere('u.subscribeToNewsletter = 1')
++            ->getQuery()
++            ->getResult();
++    }
++
+ //    /**
+ //     * @return User[] Returns an array of User objects
+ //     */

@@ -1,0 +1,35 @@
+diff --git a/tests/Service/MailerTest.php b/tests/Service/MailerTest.php
+index 894ff87a..3fa67b27 100644
+--- a/tests/Service/MailerTest.php
++++ b/tests/Service/MailerTest.php
+@@ -2,6 +2,7 @@
+ 
+ namespace App\Tests\Service;
+ 
++use App\Entity\Article;
+ use App\Entity\User;
+ use App\Service\Mailer;
+ use Knp\Snappy\Pdf;
+@@ -38,4 +39,22 @@ class MailerTest extends TestCase
+         $this->assertSame('Victor', $namedAddresses[0]->getName());
+         $this->assertSame('victor@symfonycasts.com', $namedAddresses[0]->getAddress());
+     }
++
++    public function testIntegrationSendAuthorWeeklyReportMessage()
++    {
++        $symfonyMailer = $this->createMock(MailerInterface::class);
++        $symfonyMailer->expects($this->once())
++            ->method('send');
++
++        $pdf = $this->createMock(Pdf::class);
++        $twig = $this->createMock(Environment::class);
++        $entrypointLookup = $this->createMock(EntrypointLookupInterface::class);
++
++        $user = new User();
++        $user->setFirstName('Victor');
++        $user->setEmail('victor@symfonycasts.com');
++
++        $mailer = new Mailer($symfonyMailer, $twig, $pdf, $entrypointLookup);
++        $email = $mailer->sendWelcomeMessage($user);
++    }
+ }

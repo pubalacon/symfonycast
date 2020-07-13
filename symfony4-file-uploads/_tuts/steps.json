@@ -1,0 +1,1735 @@
+{
+    "steps": [
+        {
+            "id": "start",
+            "name": "start",
+            "description": null
+        },
+        {
+            "id": "basic-upload-add-file-field-start-of-controller",
+            "name": "Basic Upload: Add file field + start of controller",
+            "description": null
+        },
+        {
+            "id": "basic-upload-add-enctype",
+            "name": "Basic Upload: add enctype",
+            "description": null
+        },
+        {
+            "id": "basic-upload-add-uploads-dir",
+            "name": "Basic Upload: Add uploads\/ dir",
+            "description": null
+        },
+        {
+            "id": "basic-upload-ignore-public-uploads",
+            "name": "Basic Upload: Ignore public\/uploads",
+            "description": null
+        },
+        {
+            "id": "basic-upload-move-file-easily",
+            "name": "Basic Upload: Move file easily",
+            "description": null
+        },
+        {
+            "id": "file-naming-use-client-original",
+            "name": "File naming: use client original",
+            "description": null
+        },
+        {
+            "id": "file-naming-add-unique-prefix",
+            "name": "File naming: add unique prefix",
+            "description": null
+        },
+        {
+            "id": "file-naming-use-safe-extension",
+            "name": "File naming: use safe extension",
+            "description": null
+        },
+        {
+            "id": "file-naming-urlize-it",
+            "name": "File naming: urlize it",
+            "description": null
+        },
+        {
+            "id": "form-add-filetype-to-form",
+            "name": "Form: Add FileType to form",
+            "description": null
+        },
+        {
+            "id": "form-make-unmapped-field",
+            "name": "Form: Make unmapped field",
+            "description": null
+        },
+        {
+            "id": "form-process-on-submit",
+            "name": "Form: Process on submit",
+            "description": null
+        },
+        {
+            "id": "form-uploads-in-subdirectory",
+            "name": "Form: uploads in subdirectory",
+            "description": null
+        },
+        {
+            "id": "form-handle-not-uploading",
+            "name": "Form: Handle not uploading",
+            "description": null
+        },
+        {
+            "id": "service-add-uploaderhelper",
+            "name": "Service: Add UploaderHelper",
+            "description": null
+        },
+        {
+            "id": "service-finish-logic-in-service",
+            "name": "Service: Finish logic in service",
+            "description": null
+        },
+        {
+            "id": "service-bind-uploadspath",
+            "name": "Service: bind $uploadsPath",
+            "description": null
+        },
+        {
+            "id": "service-use-in-new-endpoint",
+            "name": "Service: Use in new endpoint",
+            "description": null
+        },
+        {
+            "id": "validation-add-image-constraint",
+            "name": "Validation: Add Image constraint",
+            "description": null
+        },
+        {
+            "id": "validation-add-maxsize",
+            "name": "Validation: Add maxSize",
+            "description": null
+        },
+        {
+            "id": "validation-make-maxsize-real",
+            "name": "Validation: make maxSize real",
+            "description": null
+        },
+        {
+            "id": "validation-move-constraints-to-var",
+            "name": "Validation: move constraints to var",
+            "description": null
+        },
+        {
+            "id": "validation-conditionally-add-notnull",
+            "name": "Validation: conditionally add NotNull",
+            "description": null
+        },
+        {
+            "id": "field-custom-add-placeholder",
+            "name": "Field Custom: Add placeholder",
+            "description": null
+        },
+        {
+            "id": "field-custom-add-javascript",
+            "name": "Field Custom: Add JavaScript",
+            "description": null
+        },
+        {
+            "id": "rendering-change-article-imagepath",
+            "name": "Rendering: change Article.imagePath",
+            "description": null
+        },
+        {
+            "id": "rendering-use-a-constant",
+            "name": "Rendering: Use a constant",
+            "description": null
+        },
+        {
+            "id": "rendering-add-getpublicpath-helper",
+            "name": "Rendering: Add getPublicPath() helper",
+            "description": null
+        },
+        {
+            "id": "rendering-wrap-in-asset",
+            "name": "Rendering: wrap in asset()",
+            "description": null
+        },
+        {
+            "id": "rendering-requeststackcontext-base-path",
+            "name": "Rendering: RequestStackContext base path",
+            "description": null
+        },
+        {
+            "id": "rendering-add-requeststackcontext-alias",
+            "name": "Rendering: Add RequestStackContext alias",
+            "description": null
+        },
+        {
+            "id": "rendering-install-liipimaginebundle",
+            "name": "Rendering: Install LiipImagineBundle",
+            "description": null
+        },
+        {
+            "id": "rendering-first-filter",
+            "name": "Rendering: First filter",
+            "description": null
+        },
+        {
+            "id": "rendering-another-filter",
+            "name": "Rendering: Another filter",
+            "description": null
+        },
+        {
+            "id": "rendering-image-on-form",
+            "name": "Rendering: image on form",
+            "description": null
+        },
+        {
+            "id": "rendering-fix-error-on-new",
+            "name": "Rendering: fix error on new",
+            "description": null
+        },
+        {
+            "id": "fixtures-start-using-in-fixtures",
+            "name": "Fixtures: Start using in fixtures",
+            "description": null
+        },
+        {
+            "id": "fixtures-copy-before-upload",
+            "name": "Fixtures: Copy before \"upload\"",
+            "description": null
+        },
+        {
+            "id": "fixtures-refactor-to-private-method",
+            "name": "Fixtures: refactor to private method",
+            "description": null
+        },
+        {
+            "id": "flysystem-install-bundle",
+            "name": "Flysystem: install bundle",
+            "description": null
+        },
+        {
+            "id": "flysystem-use-in-uploaderhelper",
+            "name": "Flysystem: Use in UploaderHelper",
+            "description": null
+        },
+        {
+            "id": "flysystem-update-services-yaml",
+            "name": "Flysystem: update services.yaml",
+            "description": null
+        },
+        {
+            "id": "flysystem-use-stream",
+            "name": "Flysystem: use stream",
+            "description": null
+        },
+        {
+            "id": "flysystem-delete-old-file",
+            "name": "Flysystem: delete old file",
+            "description": null
+        },
+        {
+            "id": "flysystem-silent-on-old-file-not-found",
+            "name": "Flysystem: silent on old file not found",
+            "description": null
+        },
+        {
+            "id": "flysystem-code-defensively",
+            "name": "Flysystem: code defensively",
+            "description": null
+        },
+        {
+            "id": "fly-liip-add-use-loader",
+            "name": "Fly+Liip: Add & use loader",
+            "description": null
+        },
+        {
+            "id": "fly-liip-remove-uploaded-asset",
+            "name": "Fly+Liip: Remove uploaded_asset()",
+            "description": null
+        },
+        {
+            "id": "fly-liip-add-resolver",
+            "name": "Fly+Liip: Add resolver",
+            "description": null
+        },
+        {
+            "id": "fly-liip-store-uploads-in-parameter",
+            "name": "Fly+Liip: store uploads\/ in parameter",
+            "description": null
+        },
+        {
+            "id": "absolute-use-non-thumbnailed-url",
+            "name": "Absolute: Use non-thumbnailed url",
+            "description": null
+        },
+        {
+            "id": "absolute-use-site-base-url",
+            "name": "Absolute: Use SITE_BASE_URL",
+            "description": null
+        },
+        {
+            "id": "articlereference-make-entity",
+            "name": "ArticleReference: make:entity",
+            "description": null
+        },
+        {
+            "id": "articlereference-remove-adder-remover",
+            "name": "ArticleReference: remove adder\/remover",
+            "description": null
+        },
+        {
+            "id": "articlereference-markup-on-edit-form",
+            "name": "ArticleReference: Markup on edit form",
+            "description": null
+        },
+        {
+            "id": "articlereference-add-form",
+            "name": "ArticleReference: Add <form>",
+            "description": null
+        },
+        {
+            "id": "articlereference-add-form-controller",
+            "name": "ArticleReference: add form + controller",
+            "description": null
+        },
+        {
+            "id": "articlereference-start-in-uploaderhelper",
+            "name": "ArticleReference: Start in UploaderHelper",
+            "description": null
+        },
+        {
+            "id": "articlereference-start-refactoring-uploadhelper",
+            "name": "ArticleReference: Start refactoring UploadHelper",
+            "description": null
+        },
+        {
+            "id": "articlereference-finish-refactoring",
+            "name": "ArticleReference: Finish refactoring",
+            "description": null
+        },
+        {
+            "id": "articlereference-add-validation",
+            "name": "ArticleReference: Add validation",
+            "description": null
+        },
+        {
+            "id": "articlereference-show-validation-error",
+            "name": "ArticleReference: show validation error",
+            "description": null
+        },
+        {
+            "id": "articlereference-mimetype-validation",
+            "name": "ArticleReference: mimeType validation",
+            "description": null
+        },
+        {
+            "id": "articlereference-notblank-validation",
+            "name": "ArticleReference: NotBlank validation",
+            "description": null
+        },
+        {
+            "id": "articlereference-custom-notblank-message",
+            "name": "ArticleReference: custom NotBlank message",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-list-references",
+            "name": "DownloadPrivate: list references",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-start-controller",
+            "name": "DownloadPrivate: Start controller",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-add-security",
+            "name": "DownloadPrivate: Add security",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-stream-file",
+            "name": "DownloadPrivate: stream file",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-add-content-type",
+            "name": "DownloadPrivate: Add Content-Type",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-dump-disposition",
+            "name": "DownloadPrivate: dump disposition",
+            "description": null
+        },
+        {
+            "id": "downloadprivate-content-disposition",
+            "name": "DownloadPrivate: Content-disposition",
+            "description": null
+        },
+        {
+            "id": "dropzone-add-basic-js",
+            "name": "Dropzone: Add basic JS",
+            "description": null
+        },
+        {
+            "id": "dropzone-manually-create",
+            "name": "Dropzone: manually create",
+            "description": null
+        },
+        {
+            "id": "dropzone-api-response",
+            "name": "Dropzone: API response",
+            "description": null
+        },
+        {
+            "id": "dropzone-fix-api-groups",
+            "name": "Dropzone: fix API groups",
+            "description": null
+        },
+        {
+            "id": "dropzone-parse-json-error",
+            "name": "Dropzone: parse JSON error",
+            "description": null
+        },
+        {
+            "id": "jsapp-add-articles-references-endpoint",
+            "name": "JsApp: add articles references endpoint",
+            "description": null
+        },
+        {
+            "id": "jsapp-add-main-group",
+            "name": "JsApp: add main group",
+            "description": null
+        },
+        {
+            "id": "jsapp-dynamically-render",
+            "name": "JsApp: Dynamically render",
+            "description": null
+        },
+        {
+            "id": "dropzone-add-success-event",
+            "name": "Dropzone: add success event",
+            "description": null
+        },
+        {
+            "id": "dropzone-add-file-dynamically",
+            "name": "Dropzone: Add file dynamically",
+            "description": null
+        },
+        {
+            "id": "gallery-start-delete-endpoint",
+            "name": "Gallery: start delete endpoint",
+            "description": null
+        },
+        {
+            "id": "gallery-finish-delete-endpoint",
+            "name": "Gallery: Finish delete endpoint",
+            "description": null
+        },
+        {
+            "id": "gallery-add-delete-js",
+            "name": "Gallery: Add delete JS",
+            "description": null
+        },
+        {
+            "id": "gallery-tweak-anchor-align",
+            "name": "Gallery: tweak anchor align",
+            "description": null
+        },
+        {
+            "id": "gallery-start-edit-endpoint",
+            "name": "Gallery: start edit endpoint",
+            "description": null
+        },
+        {
+            "id": "gallery-finish-endpoint",
+            "name": "Gallery: Finish endpoint",
+            "description": null
+        },
+        {
+            "id": "gallery-edit-js",
+            "name": "Gallery: edit JS",
+            "description": null
+        },
+        {
+            "id": "gallery-fix-json-body",
+            "name": "Gallery: fix JSON body",
+            "description": null
+        },
+        {
+            "id": "gallery-reference-validation",
+            "name": "Gallery: Reference validation",
+            "description": null
+        },
+        {
+            "id": "gallery-add-position-field",
+            "name": "Gallery: add position field",
+            "description": null
+        },
+        {
+            "id": "gallery-default-position",
+            "name": "Gallery: default position",
+            "description": null
+        },
+        {
+            "id": "gallery-add-sortable",
+            "name": "Gallery: Add Sortable",
+            "description": null
+        },
+        {
+            "id": "gallery-customize-w-drag-handle",
+            "name": "Gallery: Customize w drag-handle",
+            "description": null
+        },
+        {
+            "id": "gallery-test-toarray",
+            "name": "Gallery: test toArray()",
+            "description": null
+        },
+        {
+            "id": "gallery-begin-reorder-endpoint",
+            "name": "Gallery: Begin reorder endpoint",
+            "description": null
+        },
+        {
+            "id": "gallery-finish-reorder-endpoint",
+            "name": "Gallery: finish reorder endpoint",
+            "description": null
+        },
+        {
+            "id": "gallery-js-for-reorder",
+            "name": "Gallery: JS for reorder",
+            "description": null
+        },
+        {
+            "id": "gallery-change-rendering-order",
+            "name": "Gallery: change rendering order",
+            "description": null
+        },
+        {
+            "id": "s3-install-aws-aws-sdk-php",
+            "name": "S3: Install aws\/aws-sdk-php",
+            "description": null
+        },
+        {
+            "id": "s3-start-adding-service",
+            "name": "S3: Start adding service",
+            "description": null
+        },
+        {
+            "id": "s3-add-env-vars",
+            "name": "S3: Add env vars",
+            "description": null
+        },
+        {
+            "id": "s3-use-with-flysystem",
+            "name": "S3: use with flysystem",
+            "description": null
+        },
+        {
+            "id": "s3-install-flysystem-adapter",
+            "name": "S3: Install flysystem adapter",
+            "description": null
+        },
+        {
+            "id": "s3-fix-public-path",
+            "name": "S3: Fix public path",
+            "description": null
+        },
+        {
+            "id": "s3-change-visibility",
+            "name": "S3: change visibility",
+            "description": null
+        },
+        {
+            "id": "s3-remove-private-fs",
+            "name": "S3: Remove private FS",
+            "description": null
+        },
+        {
+            "id": "s3-remove-more-private-fs-refs",
+            "name": "S3: remove more private fs refs",
+            "description": null
+        },
+        {
+            "id": "s3-renaming-public-fs",
+            "name": "S3: Renaming public fs",
+            "description": null
+        },
+        {
+            "id": "s3-remove-public-uploads",
+            "name": "S3: Remove public\/uploads",
+            "description": null
+        },
+        {
+            "id": "s3-install-league-flysystem-cached-adapter",
+            "name": "S3: Install league\/flysystem-cached-adapter",
+            "description": null
+        },
+        {
+            "id": "s3-use-cached-adapter",
+            "name": "S3: Use cached adapter",
+            "description": null
+        },
+        {
+            "id": "s3-create-a-signed-url-download",
+            "name": "S3: Create a signed URL download",
+            "description": null
+        },
+        {
+            "id": "s3-re-add-content-disposition",
+            "name": "S3: Re-add Content-Disposition",
+            "description": null
+        },
+        {
+            "id": "api-temp-remove-security",
+            "name": "API: temp remove security",
+            "description": null
+        },
+        {
+            "id": "api-create-model-deserialize",
+            "name": "API: Create model & deserialize",
+            "description": null
+        },
+        {
+            "id": "api-smarter-model-class",
+            "name": "API: smarter model class",
+            "description": null
+        },
+        {
+            "id": "api-create-file-object",
+            "name": "API: create File object",
+            "description": null
+        },
+        {
+            "id": "api-fix-originalfilename",
+            "name": "API: fix originalFilename",
+            "description": null
+        },
+        {
+            "id": "api-unlink-tmp-file",
+            "name": "API: unlink tmp file",
+            "description": null
+        },
+        {
+            "id": "api-remove-die-code",
+            "name": "API: remove die code",
+            "description": null
+        },
+        {
+            "id": "api-put-back-security",
+            "name": "API: Put back security",
+            "description": null
+        },
+        {
+            "id": "before-encore-upgrade-deps",
+            "name": "Before Encore: Upgrade deps",
+            "description": null
+        },
+        {
+            "id": "before-encore-css-cleanup",
+            "name": "Before Encore: CSS cleanup",
+            "description": null
+        },
+        {
+            "id": "before-encore-fix-bug-in-new-form",
+            "name": "Before Encore: fix bug in new form",
+            "description": null
+        },
+        {
+            "id": "before-encore-stop-using-s3",
+            "name": "Before Encore: stop using S3",
+            "description": null
+        },
+        {
+            "id": "before-encore-avoid-sortable-in-new-form",
+            "name": "Before Encore: avoid sortable in new form",
+            "description": null
+        },
+        {
+            "id": "install-install-encore",
+            "name": "Install: Install encore",
+            "description": null
+        },
+        {
+            "id": "install-yarn-install",
+            "name": "Install: yarn install",
+            "description": null
+        },
+        {
+            "id": "first-pack-disable-single-entry",
+            "name": "First pack: disable single entry",
+            "description": null
+        },
+        {
+            "id": "first-pack-make-css-more-noticeable",
+            "name": "First pack: make CSS more noticeable",
+            "description": null
+        },
+        {
+            "id": "first-pack-add-link-script-tags",
+            "name": "First pack: add link\/script tags",
+            "description": null
+        },
+        {
+            "id": "first-pack-use-encore-bundle-helpers",
+            "name": "First pack: use encore bundle helpers",
+            "description": null
+        },
+        {
+            "id": "import-use-watch-edit",
+            "name": "Import: use --watch, edit",
+            "description": null
+        },
+        {
+            "id": "import-export-fcn-require",
+            "name": "Import: export fcn & require",
+            "description": null
+        },
+        {
+            "id": "import-use-import-export",
+            "name": "Import: use import\/export",
+            "description": null
+        },
+        {
+            "id": "import-also-import-css",
+            "name": "Import: also import CSS",
+            "description": null
+        },
+        {
+            "id": "external-install-jquery",
+            "name": "External: install jquery",
+            "description": null
+        },
+        {
+            "id": "external-just-import-it",
+            "name": "External: Just import it",
+            "description": null
+        },
+        {
+            "id": "external-make-jquery-global",
+            "name": "External: make jQuery global",
+            "description": null
+        },
+        {
+            "id": "external-remove-global",
+            "name": "External: remove global",
+            "description": null
+        },
+        {
+            "id": "external-move-code-from-template",
+            "name": "External: Move $ code from template",
+            "description": null
+        },
+        {
+            "id": "external-remove-popper-bootstrap",
+            "name": "External: Remove popper & bootstrap",
+            "description": null
+        },
+        {
+            "id": "external-install-bootstrap",
+            "name": "External: install bootstrap",
+            "description": null
+        },
+        {
+            "id": "external-add-popper",
+            "name": "External: add popper",
+            "description": null
+        },
+        {
+            "id": "css-remove-global-bootstrap",
+            "name": "CSS: Remove global bootstrap",
+            "description": null
+        },
+        {
+            "id": "css-import-long-form",
+            "name": "CSS: import long-form",
+            "description": null
+        },
+        {
+            "id": "css-use-short-bootstrap-import",
+            "name": "CSS: use short bootstrap import",
+            "description": null
+        },
+        {
+            "id": "css-install-font-awesome",
+            "name": "CSS: Install font-awesome",
+            "description": null
+        },
+        {
+            "id": "css-copy-in-styles",
+            "name": "CSS: copy in styles",
+            "description": null
+        },
+        {
+            "id": "css-move-images",
+            "name": "CSS: move images",
+            "description": null
+        },
+        {
+            "id": "sass-try-to-import-scss",
+            "name": "SASS: try to import .scss",
+            "description": null
+        },
+        {
+            "id": "sass-install-enable",
+            "name": "SASS: install & enable",
+            "description": null
+        },
+        {
+            "id": "sass-organize-into-components",
+            "name": "SASS: Organize into components",
+            "description": null
+        },
+        {
+            "id": "sass-fix-image-path",
+            "name": "SASS: fix image path",
+            "description": null
+        },
+        {
+            "id": "sass-add-variables",
+            "name": "SASS: Add _variables",
+            "description": null
+        },
+        {
+            "id": "sass-override-bootstrap-var",
+            "name": "SASS: Override bootstrap var",
+            "description": null
+        },
+        {
+            "id": "copy-copy-images",
+            "name": "Copy: copy images",
+            "description": null
+        },
+        {
+            "id": "copy-control-destination",
+            "name": "Copy: control destination",
+            "description": null
+        },
+        {
+            "id": "copy-update-image-paths",
+            "name": "Copy: Update image paths",
+            "description": null
+        },
+        {
+            "id": "multientry-refactor-to-components",
+            "name": "MultiEntry: refactor to components\/",
+            "description": null
+        },
+        {
+            "id": "multientry-add-article-show-entry",
+            "name": "MultiEntry: Add article_show entry",
+            "description": null
+        },
+        {
+            "id": "multientry-import-jquery",
+            "name": "MultiEntry: import jquery",
+            "description": null
+        },
+        {
+            "id": "multientry-isolate-to-new-scss-file",
+            "name": "MultiEntry: Isolate to new scss file",
+            "description": null
+        },
+        {
+            "id": "multientry-import-variables",
+            "name": "MultiEntry: import variables",
+            "description": null
+        },
+        {
+            "id": "multientry-import-sass-link-tag",
+            "name": "MultiEntry: import sass + link tag",
+            "description": null
+        },
+        {
+            "id": "multientry-add-admin-article-form-entry",
+            "name": "MultiEntry: Add admin_article_form entry",
+            "description": null
+        },
+        {
+            "id": "multientry-import",
+            "name": "MultiEntry: import $",
+            "description": null
+        },
+        {
+            "id": "multientry-install-dropzone-sortable",
+            "name": "MultiEntry: install Dropzone+Sortable",
+            "description": null
+        },
+        {
+            "id": "multientry-import-dropzone-css",
+            "name": "MultiEntry: import dropzone css",
+            "description": null
+        },
+        {
+            "id": "multientry-scripts-link-in-new-tpl",
+            "name": "MultiEntry: scripts+link in new tpl",
+            "description": null
+        },
+        {
+            "id": "autocomplete-install-it",
+            "name": "Autocomplete: Install it",
+            "description": null
+        },
+        {
+            "id": "autocomplete-move-js-import",
+            "name": "Autocomplete: move js & import",
+            "description": null
+        },
+        {
+            "id": "autocomplete-import-jquery-autocomplete",
+            "name": "Autocomplete: import jQuery & autocomplete",
+            "description": null
+        },
+        {
+            "id": "autocomplete-import-plugin",
+            "name": "Autocomplete: import plugin",
+            "description": null
+        },
+        {
+            "id": "autocomplete-autoprovidejquery",
+            "name": "Autocomplete: autoProvidejQuery",
+            "description": null
+        },
+        {
+            "id": "autocomplete-move-css-into-component",
+            "name": "Autocomplete: move css into component",
+            "description": null
+        },
+        {
+            "id": "autocomplete-export-reusable-function",
+            "name": "Autocomplete: export reusable function",
+            "description": null
+        },
+        {
+            "id": "style-entries-make-2x-style-entries",
+            "name": "Style Entries: make 2x style entries",
+            "description": null
+        },
+        {
+            "id": "browsers-enablepostcssloader",
+            "name": "Browsers: enablePostCssLoader",
+            "description": null
+        },
+        {
+            "id": "browsers-install-it",
+            "name": "Browsers: install it",
+            "description": null
+        },
+        {
+            "id": "browsers-add-postcss-config-js",
+            "name": "Browsers: Add postcss.config.js",
+            "description": null
+        },
+        {
+            "id": "browsers-install-autoprefixer",
+            "name": "Browsers: Install autoprefixer",
+            "description": null
+        },
+        {
+            "id": "browsers-add-old-browserslist",
+            "name": "Browsers: add old browserslist",
+            "description": null
+        },
+        {
+            "id": "browsers-very-new-browserlist",
+            "name": "Browsers: very new browserlist",
+            "description": null
+        },
+        {
+            "id": "browsers-add-weakset",
+            "name": "Browsers: add WeakSet",
+            "description": null
+        },
+        {
+            "id": "browsers-back-to-old-browserslist",
+            "name": "Browsers: back to old browserslist",
+            "description": null
+        },
+        {
+            "id": "singleruntime-add-tooltip-to-article-show",
+            "name": "SingleRuntime: Add tooltip to article_show",
+            "description": null
+        },
+        {
+            "id": "singleruntime-import-bootstrap",
+            "name": "SingleRuntime: Import bootstrap",
+            "description": null
+        },
+        {
+            "id": "singleruntime-enablesingleruntimechunk",
+            "name": "SingleRuntime: enableSingleRuntimeChunk()",
+            "description": null
+        },
+        {
+            "id": "singleruntime-be-lazy-with-bootstrap",
+            "name": "SingleRuntime: Be lazy with Bootstrap",
+            "description": null
+        },
+        {
+            "id": "async-async-autocomplete",
+            "name": "Async: async autocomplete",
+            "description": null
+        },
+        {
+            "id": "async-use-default",
+            "name": "Async: use .default",
+            "description": null
+        },
+        {
+            "id": "mailer-preconditions",
+            "name": "Mailer: Preconditions",
+            "description": null
+        },
+        {
+            "id": "update-readme",
+            "name": "Update README",
+            "description": null
+        },
+        {
+            "id": "mailer-removing-old-services-test-yaml-file",
+            "name": "Mailer: removing old services_test.yaml file",
+            "description": null
+        },
+        {
+            "id": "mailer-commit-encore-assets",
+            "name": "Mailer: commit Encore assets",
+            "description": null
+        },
+        {
+            "id": "mailer-adding-starting-files",
+            "name": "Mailer: adding starting files",
+            "description": null
+        },
+        {
+            "id": "mailer-encore-one-more-build",
+            "name": "Mailer: Encore, one more build",
+            "description": null
+        },
+        {
+            "id": "mailer-install",
+            "name": "Mailer: Install",
+            "description": null
+        },
+        {
+            "id": "mailer-create-simple-email",
+            "name": "Mailer: Create simple email",
+            "description": null
+        },
+        {
+            "id": "mailer-send-the-email",
+            "name": "Mailer: Send the email",
+            "description": null
+        },
+        {
+            "id": "mailer-uncomment-mailer-dsn",
+            "name": "Mailer: Uncomment MAILER_DSN",
+            "description": null
+        },
+        {
+            "id": "twig-html-with-no-template",
+            "name": "Twig: html() with no template",
+            "description": null
+        },
+        {
+            "id": "twig-create-html-email-template",
+            "name": "Twig: Create HTML email template",
+            "description": null
+        },
+        {
+            "id": "twig-replace-placeholders-with-dynamic-data",
+            "name": "Twig: Replace placeholders with dynamic data",
+            "description": null
+        },
+        {
+            "id": "twig-pass-context",
+            "name": "Twig: pass context",
+            "description": null
+        },
+        {
+            "id": "twig-use-email-var",
+            "name": "Twig: Use email var",
+            "description": null
+        },
+        {
+            "id": "twig-use-named-address",
+            "name": "Twig: Use named address",
+            "description": null
+        },
+        {
+            "id": "twig-install-markdown-library",
+            "name": "Twig: Install Markdown library",
+            "description": null
+        },
+        {
+            "id": "twig-embed-logo-image",
+            "name": "Twig: Embed logo image",
+            "description": null
+        },
+        {
+            "id": "twig-upgrading-to-twig-2-12",
+            "name": "Twig: upgrading to Twig 2.12",
+            "description": null
+        },
+        {
+            "id": "twig-install-twig-pack",
+            "name": "Twig: install twig-pack",
+            "description": null
+        },
+        {
+            "id": "twig-inline-css-from-style-tag",
+            "name": "Twig: Inline CSS from style tag",
+            "description": null
+        },
+        {
+            "id": "twig-install-twig-cssinliner-extra",
+            "name": "Twig: install twig\/cssinliner-extra",
+            "description": null
+        },
+        {
+            "id": "twig-inline-css-from-file",
+            "name": "Twig: Inline CSS from file",
+            "description": null
+        },
+        {
+            "id": "inky-use-in-template",
+            "name": "Inky: Use in template",
+            "description": null
+        },
+        {
+            "id": "inky-install-extension",
+            "name": "Inky: install extension",
+            "description": null
+        },
+        {
+            "id": "inky-add-styles-to-template",
+            "name": "Inky: Add styles to template",
+            "description": null
+        },
+        {
+            "id": "command-create-a-new-command",
+            "name": "Command: Create a new command",
+            "description": null
+        },
+        {
+            "id": "command-fetch-all-subscribed-to-newsletter",
+            "name": "Command: Fetch all subscribed to newsletter",
+            "description": null
+        },
+        {
+            "id": "command-fetch-articles-published-last-week",
+            "name": "Command: Fetch articles published last week",
+            "description": null
+        },
+        {
+            "id": "command-build-and-send-the-email",
+            "name": "Command: Build and send the email",
+            "description": null
+        },
+        {
+            "id": "command-create-the-email-template",
+            "name": "Command: Create the email template",
+            "description": null
+        },
+        {
+            "id": "command-refactor-to-base-email-template",
+            "name": "Command: Refactor to base email template",
+            "description": null
+        },
+        {
+            "id": "command-replace-template-placeholders-with-dynamic-data",
+            "name": "Command: Replace template placeholders with dynamic data",
+            "description": null
+        },
+        {
+            "id": "command-fix-links",
+            "name": "Command: Fix links",
+            "description": null
+        },
+        {
+            "id": "pdf-install-knpsnappybundle",
+            "name": "PDF: Install KnpSnappyBundle",
+            "description": null
+        },
+        {
+            "id": "pdf-move-report-table-to-separate-template",
+            "name": "PDF: Move report table to separate template",
+            "description": null
+        },
+        {
+            "id": "pdf-add-bootstrap-classes-for-the-table",
+            "name": "PDF: Add Bootstrap classes for the table",
+            "description": null
+        },
+        {
+            "id": "pdf-basic-pdf-template",
+            "name": "PDF: basic PDF template",
+            "description": null
+        },
+        {
+            "id": "pdf-create-a-base-template",
+            "name": "PDF: Create a base template",
+            "description": null
+        },
+        {
+            "id": "pdf-generate-it",
+            "name": "PDF: Generate it",
+            "description": null
+        },
+        {
+            "id": "pdf-attach-it-to-email",
+            "name": "PDF: Attach it to email",
+            "description": null
+        },
+        {
+            "id": "pdf-fix-styles-using-absolute-url",
+            "name": "PDF: Fix styles using absolute URL",
+            "description": null
+        },
+        {
+            "id": "pdf-fix-styles-by-resetting-encore",
+            "name": "PDF: Fix styles by resetting Encore",
+            "description": null
+        },
+        {
+            "id": "testing-create-mailer-service",
+            "name": "Testing: Create Mailer service",
+            "description": null
+        },
+        {
+            "id": "testing-refactor-code-using-mailer-service",
+            "name": "Testing: Refactor code using Mailer service",
+            "description": null
+        },
+        {
+            "id": "testing-move-entrypoint-reset-after-render",
+            "name": "Testing: move entrypoint reset after render",
+            "description": null
+        },
+        {
+            "id": "testing-create-a-unit-test",
+            "name": "Testing: Create a unit test",
+            "description": null
+        },
+        {
+            "id": "testing-move-into-service",
+            "name": "Testing: move into Service\/",
+            "description": null
+        },
+        {
+            "id": "testing-write-some-test-code",
+            "name": "Testing: Write some test code",
+            "description": null
+        },
+        {
+            "id": "testing-return-email-objects-in-mailer",
+            "name": "Testing: Return email objects in Mailer",
+            "description": null
+        },
+        {
+            "id": "testing-add-some-assertions",
+            "name": "Testing: Add some assertions",
+            "description": null
+        },
+        {
+            "id": "integration-bootstrap-method",
+            "name": "Integration: bootstrap method",
+            "description": null
+        },
+        {
+            "id": "integration-call-other-method",
+            "name": "Integration: call other method",
+            "description": null
+        },
+        {
+            "id": "integration-fetch-services",
+            "name": "Integration: fetch services",
+            "description": null
+        },
+        {
+            "id": "integration-add-assertion",
+            "name": "Integration: add assertion",
+            "description": null
+        },
+        {
+            "id": "integration-fix-test-cache",
+            "name": "Integration: fix test cache",
+            "description": null
+        },
+        {
+            "id": "integration-add-var-dump",
+            "name": "Integration: add var_dump()",
+            "description": null
+        },
+        {
+            "id": "integration-remove-var-dump",
+            "name": "Integration: remove var_dump()",
+            "description": null
+        },
+        {
+            "id": "functional-install-browser-kit",
+            "name": "Functional: install browser-kit",
+            "description": null
+        },
+        {
+            "id": "functional-make-functional-test",
+            "name": "Functional: make:functional-test",
+            "description": null
+        },
+        {
+            "id": "functional-move-into-controller",
+            "name": "Functional: move into Controller\/",
+            "description": null
+        },
+        {
+            "id": "functional-registration-test",
+            "name": "Functional: registration test",
+            "description": null
+        },
+        {
+            "id": "functional-env-test",
+            "name": "Functional: .env.test",
+            "description": null
+        },
+        {
+            "id": "functional-null-transport-in-env-test",
+            "name": "Functional: null transport in .env.test",
+            "description": null
+        },
+        {
+            "id": "functional-use-null-transport",
+            "name": "Functional: use null transport",
+            "description": null
+        },
+        {
+            "id": "functional-show-4-4-asserts",
+            "name": "Functional: show 4.4 asserts",
+            "description": null
+        },
+        {
+            "id": "sendgrid-install-it",
+            "name": "SendGrid: Install it",
+            "description": null
+        },
+        {
+            "id": "listener-set-recipients",
+            "name": "Listener: Set recipients",
+            "description": null
+        },
+        {
+            "id": "listener-set-from-globally",
+            "name": "Listener: Set from() globally",
+            "description": null
+        },
+        {
+            "id": "messenger-install-it",
+            "name": "Messenger: Install it",
+            "description": null
+        },
+        {
+            "id": "messenger-configure-it",
+            "name": "Messenger: Configure it",
+            "description": null
+        },
+        {
+            "id": "messenger-use-in-memory-in-test",
+            "name": "Messenger: use in-memory:\/\/ in test",
+            "description": null
+        },
+        {
+            "id": "webpack-encore-install-foundation-emails-package",
+            "name": "Webpack Encore: Install foundation-emails package",
+            "description": null
+        },
+        {
+            "id": "webpack-encore-import-foundation-css",
+            "name": "Webpack Encore: Import Foundation CSS",
+            "description": null
+        },
+        {
+            "id": "webpack-encore-add-new-style-entry",
+            "name": "Webpack Encore: Add new style entry",
+            "description": null
+        },
+        {
+            "id": "webpack-encore-create-new-twig-function",
+            "name": "Webpack Encore: Create new Twig function",
+            "description": null
+        },
+        {
+            "id": "webpack-encore-use-in-the-template",
+            "name": "Webpack Encore: Use in the template",
+            "description": null
+        },
+        {
+            "id": "pre-upgrade-remove-old-use-statements",
+            "name": "PRE UPGRADE: remove old use statements",
+            "description": null
+        },
+        {
+            "id": "pre-upgrade-commit-new-email-encore-assets",
+            "name": "PRE UPGRADE: commit new email Encore assets",
+            "description": null
+        },
+        {
+            "id": "pre-upgrade-remove-slack-2-2-conflict",
+            "name": "PRE UPGRADE: remove slack 2.2 conflict",
+            "description": null
+        },
+        {
+            "id": "pre-upgrade-remove-apcu-for-ease",
+            "name": "PRE UPGRADE: remove apcu for ease",
+            "description": null
+        },
+        {
+            "id": "pre-upgrade-change-site-base-url",
+            "name": "PRE UPGRADE: change SITE_BASE_URL",
+            "description": null
+        },
+        {
+            "id": "pre-upgrade-tweaking-readme",
+            "name": "PRE UPGRADE: Tweaking README",
+            "description": null
+        },
+        {
+            "id": "upgrade-4-4-upgrade-patch-symfony",
+            "name": "Upgrade 4.4: upgrade patch symfony\/*",
+            "description": null
+        },
+        {
+            "id": "upgrade-4-4-extra-symfony-require-4-4",
+            "name": "Upgrade 4.4: extra.symfony.require 4.4.*",
+            "description": null
+        },
+        {
+            "id": "upgrade-4-4-update-symfony",
+            "name": "Upgrade 4.4: update symfony\/*",
+            "description": null
+        },
+        {
+            "id": "upgrade-4-4-change-reqs-to-4-4",
+            "name": "Upgrade 4.4: change reqs to 4.4.*",
+            "description": null
+        },
+        {
+            "id": "upgrade-4-4-symfony-dotenv-to-require",
+            "name": "Upgrade 4.4: symfony\/dotenv to require",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-console",
+            "name": "Recipes: update symfony\/console",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-flex",
+            "name": "Recipes: update symfony\/flex",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-framework-bundle",
+            "name": "Recipes: update symfony\/framework-bundle",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-twig-bundle",
+            "name": "Recipes: update symfony\/twig-bundle",
+            "description": null
+        },
+        {
+            "id": "recipes-manually-remove-twig-yaml-dev-routing",
+            "name": "Recipes: manually remove twig.yaml dev routing",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-mailer",
+            "name": "Recipes: update symfony\/mailer",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-sendgrid-mailer",
+            "name": "Recipes: update symfony\/sendgrid-mailer",
+            "description": null
+        },
+        {
+            "id": "recipes-update-mailer-null-syntax",
+            "name": "Recipes: update mailer null syntax",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-phpunit-bridge",
+            "name": "Recipes: update symfony\/phpunit-bridge",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-routing",
+            "name": "Recipes: update symfony\/routing",
+            "description": null
+        },
+        {
+            "id": "recipes-manually-remove-test-routing-yaml",
+            "name": "Recipes: manually remove test routing.yaml",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-security-bundle",
+            "name": "Recipes: update symfony\/security-bundle",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-translation",
+            "name": "Recipes: update symfony\/translation",
+            "description": null
+        },
+        {
+            "id": "recipes-manually-remove-locale",
+            "name": "Recipes: manually remove locale",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-validator",
+            "name": "Recipes: update symfony\/validator",
+            "description": null
+        },
+        {
+            "id": "recipes-update-symfony-webpack-encore-bundle",
+            "name": "Recipes: update symfony\/webpack-encore-bundle",
+            "description": null
+        },
+        {
+            "id": "deprecations-remove-webserverbundle",
+            "name": "Deprecations: remove WebServerBundle",
+            "description": null
+        },
+        {
+            "id": "deprecations-upgrade-liipimaginebundle",
+            "name": "Deprecations: upgrade LiipImagineBundle",
+            "description": null
+        },
+        {
+            "id": "deprecations-update-liipimaginebundle-recipe",
+            "name": "Deprecations: update LiipImagineBundle recipe",
+            "description": null
+        },
+        {
+            "id": "deprecations-upgrade-paginator",
+            "name": "Deprecations: Upgrade paginator",
+            "description": null
+        },
+        {
+            "id": "deprecations-change-php-platform-version",
+            "name": "Deprecations: change php platform version",
+            "description": null
+        },
+        {
+            "id": "deprecations-actually-upgrade-paginator",
+            "name": "Deprecations: Actually upgrade paginator",
+            "description": null
+        },
+        {
+            "id": "deprecations-swap-extensions-bundle-package",
+            "name": "Deprecations: swap extensions bundle package",
+            "description": null
+        },
+        {
+            "id": "doctrine-small-update",
+            "name": "Doctrine: small update",
+            "description": null
+        },
+        {
+            "id": "doctrine-unpack-orm-pack",
+            "name": "Doctrine: unpack orm-pack",
+            "description": null
+        },
+        {
+            "id": "doctrine-doctrinebundle-2-0-only",
+            "name": "Doctrine: DoctrineBundle 2.0 only",
+            "description": null
+        },
+        {
+            "id": "doctrine-upgrade-a-lot-of-doctrine-stuff",
+            "name": "Doctrine: upgrade a lot of Doctrine stuff",
+            "description": null
+        },
+        {
+            "id": "doctrine-repository-autowire-update",
+            "name": "Doctrine: repository autowire update",
+            "description": null
+        },
+        {
+            "id": "doctrine-update-recipe",
+            "name": "Doctrine: update recipe",
+            "description": null
+        },
+        {
+            "id": "deprecations-getextendedtypes-form",
+            "name": "Deprecations: getExtendedTypes() form",
+            "description": null
+        },
+        {
+            "id": "deprecations-fix-extends-controller",
+            "name": "Deprecations: fix extends Controller",
+            "description": null
+        },
+        {
+            "id": "deprecations-namedaddress",
+            "name": "Deprecations: NamedAddress",
+            "description": null
+        },
+        {
+            "id": "deprecations-namedaddress-in-tests",
+            "name": "Deprecations: NamedAddress in tests",
+            "description": null
+        },
+        {
+            "id": "deprecations-return-0-in-command",
+            "name": "Deprecations: return 0 in command",
+            "description": null
+        },
+        {
+            "id": "5-0-change-reqs-to-5-0",
+            "name": "5.0: change reqs to 5.0.*",
+            "description": null
+        },
+        {
+            "id": "5-0-change-to-php-7-3",
+            "name": "5.0: change to php 7.3",
+            "description": null
+        },
+        {
+            "id": "5-0-update",
+            "name": "5.0: update!",
+            "description": null
+        },
+        {
+            "id": "secrets-tmp-dump-mailer-dsn",
+            "name": "Secrets: tmp dump MAILER_DSN",
+            "description": null
+        },
+        {
+            "id": "secrets-remove-mailer-dsn-env-var",
+            "name": "Secrets: remove MAILER_DSN env var",
+            "description": null
+        },
+        {
+            "id": "secrets-mailer-dsn-to-dev-vault",
+            "name": "Secrets: MAILER_DSN to dev vault",
+            "description": null
+        },
+        {
+            "id": "secrets-prod-vault-mailer-dsn",
+            "name": "Secrets: prod vault MAILER_DSN",
+            "description": null
+        },
+        {
+            "id": "secrets-prod-environment",
+            "name": "Secrets: prod environment",
+            "description": null
+        },
+        {
+            "id": "secrets-delete-me",
+            "name": "Secrets: delete me",
+            "description": null
+        },
+        {
+            "id": "secrets-back-to-dev-env",
+            "name": "Secrets: back to dev env",
+            "description": null
+        },
+        {
+            "id": "secrets-local-vault",
+            "name": "Secrets: \"local\" vault",
+            "description": null
+        },
+        {
+            "id": "secrets-remove-local-dev-vault",
+            "name": "Secrets: remove local dev vault",
+            "description": null
+        },
+        {
+            "id": "secrets-env-test",
+            "name": "Secrets: .env.test",
+            "description": null
+        },
+        {
+            "id": "secrets-remove-debug-code",
+            "name": "Secrets: remove debug code",
+            "description": null
+        },
+        {
+            "id": "autovalidation-formnovalidate",
+            "name": "AutoValidation: formnovalidate",
+            "description": null
+        },
+        {
+            "id": "autovalidation-remove-notblank",
+            "name": "AutoValidation: remove NotBlank",
+            "description": null
+        },
+        {
+            "id": "autovalidation-add-enableautomapping",
+            "name": "AutoValidation: add EnableAutoMapping",
+            "description": null
+        },
+        {
+            "id": "autovalidation-nullable-true",
+            "name": "AutoValidation: nullable=true",
+            "description": null
+        },
+        {
+            "id": "autovalidation-remove-doctrine-metadata",
+            "name": "AutoValidation: remove Doctrine metadata",
+            "description": null
+        },
+        {
+            "id": "autovalidation-nullable-argument",
+            "name": "AutoValidation: nullable argument",
+            "description": null
+        },
+        {
+            "id": "autovalidation-put-everything-back",
+            "name": "AutoValidation: put everything back",
+            "description": null
+        },
+        {
+            "id": "autovalidation-re-add-notblank",
+            "name": "AutoValidation: re-add NotBlank",
+            "description": null
+        },
+        {
+            "id": "encoder-add-migrate-from-encoder",
+            "name": "Encoder: add migrate_from encoder",
+            "description": null
+        },
+        {
+            "id": "encoder-migrate-from",
+            "name": "Encoder: migrate_from",
+            "description": null
+        },
+        {
+            "id": "encoder-add-guard-passwordauthenticatedinterface",
+            "name": "Encoder: Add Guard PasswordAuthenticatedInterface",
+            "description": null
+        },
+        {
+            "id": "encoder-userrepo-passwordupgraderinterface",
+            "name": "Encoder: UserRepo PasswordUpgraderInterface",
+            "description": null
+        },
+        {
+            "id": "encoder-add-upgradepassword-logic",
+            "name": "Encoder: add upgradePassword() logic",
+            "description": null
+        },
+        {
+            "id": "lint-container-upgrade-php-http-httplug",
+            "name": "lint:container upgrade php-http\/httplug",
+            "description": null
+        },
+        {
+            "id": "lint-container-require-http-interop-http-factory-guzzle",
+            "name": "lint:container require http-interop\/http-factory-guzzle",
+            "description": null
+        }
+    ],
+    "sha": "3a6d58685ebb5089e6f90520b35a78ccb8146346"
+}

@@ -1,0 +1,48 @@
+diff --git a/src/Controller/ArticleReferenceAdminController.php b/src/Controller/ArticleReferenceAdminController.php
+index 44f7b6ae..9b80facb 100644
+--- a/src/Controller/ArticleReferenceAdminController.php
++++ b/src/Controller/ArticleReferenceAdminController.php
+@@ -11,6 +11,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
+ use Symfony\Component\HttpFoundation\Request;
+ use Symfony\Component\Routing\Annotation\Route;
+ use Symfony\Component\Validator\Constraints\File;
++use Symfony\Component\Validator\Constraints\NotBlank;
+ use Symfony\Component\Validator\ConstraintViolation;
+ use Symfony\Component\Validator\Validator\ValidatorInterface;
+ 
+@@ -27,19 +28,22 @@ class ArticleReferenceAdminController extends BaseController
+ 
+         $violations = $validator->validate(
+             $uploadedFile,
+-            new File([
+-                'maxSize' => '5M',
+-                'mimeTypes' => [
+-                    'image/*',
+-                    'application/pdf',
+-                    'application/msword',
+-                    'application/vnd.ms-excel',
+-                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+-                    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+-                    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+-                    'text/plain'
+-                ]
+-            ])
++            [
++                new NotBlank(),
++                new File([
++                    'maxSize' => '5M',
++                    'mimeTypes' => [
++                        'image/*',
++                        'application/pdf',
++                        'application/msword',
++                        'application/vnd.ms-excel',
++                        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
++                        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
++                        'application/vnd.openxmlformats-officedocument.presentationml.presentation',
++                        'text/plain'
++                    ]
++                ])
++            ]
+         );
+ 
+         if ($violations->count() > 0) {

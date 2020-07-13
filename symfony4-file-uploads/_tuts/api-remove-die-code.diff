@@ -1,0 +1,12 @@
+diff --git a/src/Controller/ArticleReferenceAdminController.php b/src/Controller/ArticleReferenceAdminController.php
+index b67f002d..0cefa6da 100644
+--- a/src/Controller/ArticleReferenceAdminController.php
++++ b/src/Controller/ArticleReferenceAdminController.php
+@@ -86,7 +86,6 @@ class ArticleReferenceAdminController extends BaseController
+ 
+         if (is_file($uploadedFile->getPathname())) {
+             unlink($uploadedFile->getPathname());
+-            dd($uploadedFile->getPathname());
+         }
+ 
+         $entityManager->persist($articleReference);

@@ -1,0 +1,20 @@
+diff --git a/src/Controller/ArticleReferenceAdminController.php b/src/Controller/ArticleReferenceAdminController.php
+index 3575c855..9f6ca888 100644
+--- a/src/Controller/ArticleReferenceAdminController.php
++++ b/src/Controller/ArticleReferenceAdminController.php
+@@ -79,7 +79,14 @@ class ArticleReferenceAdminController extends BaseController
+      */
+     public function getArticleReferences(Article $article)
+     {
+-        return $this->json($article->getArticleReferences());
++        return $this->json(
++            $article->getArticleReferences(),
++            200,
++            [],
++            [
++                'groups' => ['main']
++            ]
++        );
+     }
+ 
+     /**

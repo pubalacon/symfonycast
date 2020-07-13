@@ -1,0 +1,12 @@
+diff --git a/assets/js/app.js b/assets/js/app.js
+index 79f1b735..042000c4 100644
+--- a/assets/js/app.js
++++ b/assets/js/app.js
+@@ -9,6 +9,7 @@
+ import '../css/app.css';
+ 
+ import $ from 'jquery';
++global.$ = $;
+ import getNiceMessage from './get_nice_message';
+ 
+ console.log(getNiceMessage(5));

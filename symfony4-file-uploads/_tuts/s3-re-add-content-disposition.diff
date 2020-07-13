@@ -1,0 +1,22 @@
+diff --git a/src/Controller/ArticleReferenceAdminController.php b/src/Controller/ArticleReferenceAdminController.php
+index 859ec1f4..c216be34 100644
+--- a/src/Controller/ArticleReferenceAdminController.php
++++ b/src/Controller/ArticleReferenceAdminController.php
+@@ -130,9 +130,16 @@ class ArticleReferenceAdminController extends BaseController
+         $article = $reference->getArticle();
+         $this->denyAccessUnlessGranted('MANAGE', $article);
+ 
++        $disposition = HeaderUtils::makeDisposition(
++            ResponseHeaderBag::DISPOSITION_ATTACHMENT,
++            $reference->getOriginalFilename()
++        );
++
+         $command = $s3Client->getCommand('GetObject', [
+             'Bucket' => $s3BucketName,
+-            'Key' => $reference->getFilePath()
++            'Key' => $reference->getFilePath(),
++            'ResponseContentType' => $reference->getMimeType(),
++            'ResponseContentDisposition' => $disposition,
+         ]);
+         $request = $s3Client->createPresignedRequest($command, '+30 minutes');
+ 

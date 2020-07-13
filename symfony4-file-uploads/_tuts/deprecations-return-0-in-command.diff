@@ -1,0 +1,12 @@
+diff --git a/src/Command/ArticleStatsCommand.php b/src/Command/ArticleStatsCommand.php
+index 0f43e5a2..61df983e 100644
+--- a/src/Command/ArticleStatsCommand.php
++++ b/src/Command/ArticleStatsCommand.php
+@@ -46,5 +46,7 @@ class ArticleStatsCommand extends Command
+             default:
+                 throw new \Exception('What kind of crazy format is that!?');
+         }
++
++        return 0;
+     }
+ }

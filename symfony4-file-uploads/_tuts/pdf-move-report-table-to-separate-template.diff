@@ -1,0 +1,46 @@
+diff --git a/templates/email/_report-table.html.twig b/templates/email/_report-table.html.twig
+new file mode 100644
+index 00000000..1e80d0bf
+--- /dev/null
++++ b/templates/email/_report-table.html.twig
+@@ -0,0 +1,14 @@
++<table>
++    <tr>
++        <th>#</th>
++        <th>Title</th>
++        <th>Comments</th>
++    </tr>
++    {% for article in articles %}
++        <tr>
++            <td>{{ loop.index }}</td>
++            <td>{{ article.title }}</td>
++            <td>{{ article.comments|length }}</td>
++        </tr>
++    {% endfor %}
++</table>
+diff --git a/templates/email/author-weekly-report.html.twig b/templates/email/author-weekly-report.html.twig
+index 03956daa..14094df4 100644
+--- a/templates/email/author-weekly-report.html.twig
++++ b/templates/email/author-weekly-report.html.twig
+@@ -12,20 +12,7 @@
+     </row>
+     <row>
+         <columns>
+-            <table>
+-                <tr>
+-                    <th>#</th>
+-                    <th>Title</th>
+-                    <th>Comments</th>
+-                </tr>
+-                {% for article in articles %}
+-                <tr>
+-                    <td>{{ loop.index }}</td>
+-                    <td>{{ article.title }}</td>
+-                    <td>{{ article.comments|length }}</td>
+-                </tr>
+-                {% endfor %}
+-            </table>
++            {{ include('email/_report-table.html.twig') }}
+         </columns>
+     </row>
+     <row>
