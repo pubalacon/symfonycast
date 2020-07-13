@@ -2,19 +2,20 @@
 
 namespace App\Form;
 
-use App\Entity\Article;
 use App\Entity\User;
-use App\Repository\ArticleRepository;
+use App\Entity\Article;
 use App\Repository\UserRepository;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\FormBuilderInterface;
+use App\Repository\ArticleRepository;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
+use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormInterface;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class ArticleFormType extends AbstractType
 {
@@ -49,6 +50,9 @@ class ArticleFormType extends AbstractType
                     'Interstellar Space' => 'interstellar_space'
                 ],
                 'required' => false,
+            ])
+            ->add('imageFile', FileType::class, [
+                'mapped' => false
             ])
         ;
 

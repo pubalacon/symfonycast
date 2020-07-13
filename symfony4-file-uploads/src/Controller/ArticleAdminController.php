@@ -4,13 +4,14 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Form\ArticleFormType;
+use Gedmo\Sluggable\Util\Urlizer;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManagerInterface;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ArticleAdminController extends BaseController
 {
@@ -52,6 +53,25 @@ class ArticleAdminController extends BaseController
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            
+            /** @var UploadedFile $uploadedFile */
+            // get the image datas from form
+            $uploadedFile = $request->files->get('image');
+            
+            // get the original filename
+            $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
+            // if needed, transform special chars to url accepted ones
+            $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();
+            // set the target dir
+            $destination = $this->getParameter('kernel.project_dir').'/public/uploads/article_image';
+            // move the the temporary file to target dir
+            $uploadedFile->move(
+                $destination,
+                $newFilename
+            );
+            // set the image filename in entity
+            $article->setImageFilename($newFilename);
+
             $em->persist($article);
             $em->flush();
 
@@ -65,13 +85,6 @@ class ArticleAdminController extends BaseController
         return $this->render('article_admin/edit.html.twig', [
             'articleForm' => $form->createView()
         ]);
-    }
-
-    /**
-     * @Route("/admin/upload/test", name="upload_test")
-     */
-    public function temporaryUploadAction(Request $request)
-    {
     }
 
     /**
