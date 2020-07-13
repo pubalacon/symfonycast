@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Article;
 use App\Form\ArticleFormType;
-use Gedmo\Sluggable\Util\Urlizer;
+use App\Service\UploaderHelper;
 use App\Repository\ArticleRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
@@ -45,7 +45,7 @@ class ArticleAdminController extends BaseController
      * @Route("/admin/article/{id}/edit", name="admin_article_edit")
      * @IsGranted("MANAGE", subject="article")
      */
-    public function edit(Article $article, Request $request, EntityManagerInterface $em)
+    public function edit(Article $article, Request $request, EntityManagerInterface $em, UploaderHelper $uploaderHelper)
     {
         $form = $this->createForm(ArticleFormType::class, $article, [
             'include_published_at' => true
@@ -56,21 +56,15 @@ class ArticleAdminController extends BaseController
             
             /** @var UploadedFile $uploadedFile */
             // get the image datas from form
-            $uploadedFile = $request->files->get('image');
+            $uploadedFile = $form['imageFile']->getData();
             
-            // get the original filename
-            $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
-            // if needed, transform special chars to url accepted ones
-            $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();
-            // set the target dir
-            $destination = $this->getParameter('kernel.project_dir').'/public/uploads/article_image';
-            // move the the temporary file to target dir
-            $uploadedFile->move(
-                $destination,
-                $newFilename
-            );
-            // set the image filename in entity
-            $article->setImageFilename($newFilename);
+            // as the image file is optional, we need to test if it is i request
+            if ($uploadedFile) {
+                // get the new filename through helper
+                $newFilename = $uploaderHelper->uploadArticleImage($uploadedFile);
+                // set the image filename in entity
+                $article->setImageFilename($newFilename);
+            }
 
             $em->persist($article);
             $em->flush();

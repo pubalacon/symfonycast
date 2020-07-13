@@ -52,7 +52,8 @@ class ArticleFormType extends AbstractType
                 'required' => false,
             ])
             ->add('imageFile', FileType::class, [
-                'mapped' => false
+                'mapped' => false,
+                'required' => false,
             ])
         ;
 
