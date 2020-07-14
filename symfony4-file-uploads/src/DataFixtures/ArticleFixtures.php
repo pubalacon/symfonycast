@@ -2,11 +2,14 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Tag;
 use App\Entity\Article;
 use App\Entity\Comment;
-use App\Entity\Tag;
-use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+use App\Service\UploaderHelper;
+use Symfony\Component\Filesystem\Filesystem;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\File\File;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 class ArticleFixtures extends BaseFixture implements DependentFixtureInterface
 {
@@ -22,6 +25,13 @@ class ArticleFixtures extends BaseFixture implements DependentFixtureInterface
         'lightspeed.png',
     ];
 
+    private $uploaderHelper;
+
+    public function __construct(UploaderHelper $uploaderHelper)
+    {
+        $this->uploaderHelper = $uploaderHelper;
+    }
+    
     protected function loadData(ObjectManager $manager)
     {
         $this->createMany(10, 'main_articles', function($count) use ($manager) {
@@ -52,9 +62,11 @@ EOF
                 $article->setPublishedAt($this->faker->dateTimeBetween('-100 days', '-1 days'));
             }
 
+            $imageFilename = $this->fakeUploadImage();
+            
             $article->setAuthor($this->getRandomReference('main_users'))
                 ->setHeartCount($this->faker->numberBetween(5, 100))
-                ->setImageFilename($this->faker->randomElement(self::$articleImages))
+                ->setImageFilename($imageFilename)
             ;
 
             $tags = $this->getRandomReferences('main_tags', $this->faker->numberBetween(0, 5));
@@ -75,4 +87,14 @@ EOF
             UserFixture::class,
         ];
     }
+
+    private function fakeUploadImage(): string
+    {
+        $randomImage = $this->faker->randomElement(self::$articleImages);
+        $fs = new Filesystem();
+        $targetPath = sys_get_temp_dir().'/'.$randomImage;
+        $fs->copy(__DIR__.'/images/'.$randomImage, $targetPath, true);
+        return $this->uploaderHelper
+            ->uploadArticleImage(new File($targetPath));
+    }    
 }

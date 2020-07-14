@@ -4,6 +4,7 @@ namespace App\Service;
 
 use Gedmo\Sluggable\Util\Urlizer;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Asset\Context\RequestStackContext;
 
 class UploaderHelper
@@ -17,16 +18,24 @@ class UploaderHelper
         $this->requestStackContext = $requestStackContext;
     }
     
-    public function uploadArticleImage(UploadedFile $uploadedFile): string
+    public function uploadArticleImage(File $file): string
     {
         // get the original filename
-        $originalFilename = pathinfo($uploadedFile->getClientOriginalName(), PATHINFO_FILENAME);
+        //$originalFilename = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+        //$newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$file->guessExtension();
+        
+        if ($file instanceof UploadedFile) {
+            $originalFilename = $file->getClientOriginalName();
+        } else {
+            $originalFilename = $file->getFilename();
+        }
+        
         // if needed, transform special chars to url accepted ones
-        $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();
+        $newFilename = Urlizer::urlize(pathinfo($originalFilename, PATHINFO_FILENAME)).'-'.uniqid().'.'.$file->guessExtension();
         // set the target dir
         $destination = $this->uploadsPath.'/'.self::ARTICLE_IMAGE;
         // move the the temporary file to target dir
-        $uploadedFile->move(
+        $file->move(
             $destination,
             $newFilename
         );
