@@ -19,7 +19,7 @@ class ArticleAdminController extends BaseController
      * @Route("/admin/article/new", name="admin_article_new")
      * @IsGranted("ROLE_ADMIN_ARTICLE")
      */
-    public function new(EntityManagerInterface $em, Request $request)
+    public function new(EntityManagerInterface $em, Request $request, UploaderHelper $uploaderHelper)
     {
         $form = $this->createForm(ArticleFormType::class);
 
@@ -27,6 +27,18 @@ class ArticleAdminController extends BaseController
         if ($form->isSubmitted() && $form->isValid()) {
             /** @var Article $article */
             $article = $form->getData();
+
+            /** @var UploadedFile $uploadedFile */
+            // get the image datas from form
+            $uploadedFile = $form['imageFile']->getData();
+            
+            // as the image file is optional, we need to test if it is i request
+            if ($uploadedFile) {
+                // get the new filename through helper
+                $newFilename = $uploaderHelper->uploadArticleImage($uploadedFile);
+                // set the image filename in entity
+                $article->setImageFilename($newFilename);
+            }
 
             $em->persist($article);
             $em->flush();

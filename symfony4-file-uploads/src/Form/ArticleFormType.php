@@ -12,6 +12,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Validator\Constraints\Image;
+use Symfony\Component\Validator\Constraints\NotNull;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -51,11 +53,25 @@ class ArticleFormType extends AbstractType
                 ],
                 'required' => false,
             ])
-            ->add('imageFile', FileType::class, [
-                'mapped' => false,
-                'required' => false,
-            ])
         ;
+
+        $imageConstraints = [
+            new Image([
+                'maxSize' => '5M'
+            ])
+        ];
+
+        if (!$isEdit || !$article->getImageFilename()) {
+            $imageConstraints[] = new NotNull([
+                'message' => 'Please upload an image',
+            ]);
+        }
+
+        $builder->add('imageFile', FileType::class, [
+            'mapped' => false,
+            'required' => false,
+            'constraints' => $imageConstraints,
+        ]);
 
         if ($options['include_published_at']) {
             $builder->add('publishedAt', null, [

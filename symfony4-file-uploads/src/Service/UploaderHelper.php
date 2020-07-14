@@ -4,13 +4,17 @@ namespace App\Service;
 
 use Gedmo\Sluggable\Util\Urlizer;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Asset\Context\RequestStackContext;
 
 class UploaderHelper
 {
 
-    public function __construct(string $uploadsPath)
+    const ARTICLE_IMAGE = 'article_image';
+
+    public function __construct(string $uploadsPath, RequestStackContext $requestStackContext)
     {
         $this->uploadsPath = $uploadsPath;
+        $this->requestStackContext = $requestStackContext;
     }
     
     public function uploadArticleImage(UploadedFile $uploadedFile): string
@@ -20,7 +24,7 @@ class UploaderHelper
         // if needed, transform special chars to url accepted ones
         $newFilename = Urlizer::urlize($originalFilename).'-'.uniqid().'.'.$uploadedFile->guessExtension();
         // set the target dir
-        $destination = $this->uploadsPath.'/article_image';
+        $destination = $this->uploadsPath.'/'.self::ARTICLE_IMAGE;
         // move the the temporary file to target dir
         $uploadedFile->move(
             $destination,
@@ -28,5 +32,12 @@ class UploaderHelper
         );
 
         return $newFilename;
+    }
+
+    public function getPublicPath(string $path): string
+    {
+        // needed if you deploy under a subdirectory
+        return $this->requestStackContext
+            ->getBasePath().'/uploads/'.$path;
     }
 }
